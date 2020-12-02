@@ -9,6 +9,7 @@ $liste = $pr->list_produits();
         <h2 class="title text-center">Articles récents</h2>
         <?php
         while ($row = $liste->fetch_assoc()) {
+            if (!isset($_GET['cat']) || ($row["categorie"] == $_GET['cat'])) {
         ?>
         <div class="col-sm-4">
             <div class="product-image-wrapper">
@@ -32,7 +33,8 @@ $liste = $pr->list_produits();
 
             </div>
         </div>
-        <?php } ?>
+        <?php }
+        } ?>
 
 
     </div>
