@@ -84,7 +84,7 @@ class Commande
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT photo,quantite,date,etat,user.email,user.id,user.nom,user.telephone,user.adresse,produit.prix,produit.description,produit.categorie,produit.id_user,produit.titre FROM `commande` ,produit ,user WHERE produit.id=commande.id_produit AND produit.id_user='" . $_SESSION['id'] . "'";
+        $sql = "SELECT photo,quantite,date,etat,user.email,user.id,user.nom,user.telephone,user.adresse,produit.prix,produit.description,produit.categorie,produit.id_user,produit.titre FROM `commande` ,produit ,user WHERE produit.id=commande.id_produit AND commande.id_user='" . $_SESSION['id'] . "'";
         $result = $conn->query($sql);
         return $result;
     }
