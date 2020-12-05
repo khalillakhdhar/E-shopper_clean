@@ -43,9 +43,9 @@ if (isset($_POST["email"])) {
                     <div class="login-form">
                         <!--login form-->
                         <h2>Connexion</h2>
-                        <form action="login.php" method="POST">
-                            <input type="text" placeholder="Name" />
-                            <input type="email" placeholder="Email Address" />
+                        <form action="cnx.php" method="POST">
+                            <input type="email" name="email" placeholder="Email" />
+                            <input type="password" placeholder="Mot de passe" name="mdp" />
 
                             <button type="submit" class="btn btn-default">Login</button>
                         </form>
