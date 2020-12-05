@@ -8,4 +8,4 @@ if (isset($_GET["id"])) {
 
     $cm->addcommande($_SESSION["id"], $id, 1);
 }
-header("location:index.php");
+header("location:../index.php");
