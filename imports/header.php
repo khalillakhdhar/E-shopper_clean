@@ -1,3 +1,8 @@
+    <?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    ?>
     <header id="header">
         <!--header-->
         <div class="header_top">
@@ -41,9 +46,12 @@
                     <div class="col-md-8 clearfix">
                         <div class="shop-menu clearfix pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
-                                <li><a href="panier.php"><i class="fa fa-shopping-cart"></i> panier</a></li>
+                                <?php if (isset($_SESSION['id'])) { ?> <li><a href="panier.php"><i
+                                            class="fa fa-shopping-cart"></i> panier</a></li>
                                 <li><a href="login.php"><i class="fa fa-lock"></i> Déconnexion</a></li>
+                                <?php } else { ?>
+                                <a href="login.php"><i class="fa fa-lock"></i> Connexion</a></li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
@@ -68,7 +76,7 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="accueil.php" class="active">Accueil</a></li>
+                                <li><a href="index.php" class="active">Accueil</a></li>
                                 <li class="dropdown"><a href="#">Shoping<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="produits.php">produits</a></li>
