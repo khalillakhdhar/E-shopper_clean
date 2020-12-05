@@ -1,6 +1,10 @@
 <!--/head-->
 <?php
+session_start();
+if (!isset($_SESSION['id'])) {
 
+    header("location:login.php");
+}
 include('./imports/imports.php');
 //
 include('./models/crud_commande.php');
@@ -14,9 +18,9 @@ $liste = $cm->list_mescommandes();
 
 <body>
     <?php
-	include('./imports/header.php');
+    include('./imports/header.php');
 
-	?>
+    ?>
     <!--/header-->
 
     <section id="cart_items">
@@ -159,9 +163,9 @@ $liste = $cm->list_mescommandes();
 
 
     <?php
-	include('./imports/footer.php')
+    include('./imports/footer.php')
 
-	?>
+    ?>
     <!--/Footer-->
 
 
