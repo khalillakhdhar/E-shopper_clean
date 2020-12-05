@@ -18,7 +18,7 @@ $liste = $pr->list_produits();
                         <img src="<?= $row["photo"] ?>" alt="" />
                         <h2><?= $row["prix"] ?></h2>
                         <p><?= $row["description"] ?></p>
-                        <a a href="/controllers/CommandeController.php?id=<?= $row["id"] ?>"
+                        <a a href="./controllers/CommandeController.php?id=<?= $row["id"] ?>"
                             class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Ajouter au
                             panier</a>
                     </div>
@@ -26,7 +26,7 @@ $liste = $pr->list_produits();
                         <div class="overlay-content">
                             <h2><?= $row["prix"] ?></h2>
                             <p><?= $row["description"] ?></p>
-                            <a href="/controllers/CommandeController.php?id=<?= $row["id"] ?>"
+                            <a href="./controllers/CommandeController.php?id=<?= $row["id"] ?>"
                                 class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Ajouter
                                 au panier</a>
                         </div>
