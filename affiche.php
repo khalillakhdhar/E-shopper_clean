@@ -25,7 +25,8 @@ $liste = $pr->list_produits();
                         <div class="overlay-content">
                             <h2><?= $row["prix"] ?></h2>
                             <p><?= $row["description"] ?></p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Ajouter
+                            <a href="/controllers/CommandeController.php?id=<?= $row["id"] ?>"
+                                class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Ajouter
                                 au panier</a>
                         </div>
                     </div>
