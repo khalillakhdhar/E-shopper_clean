@@ -69,7 +69,7 @@ class Commande
         $result = $conn->query($sql);
         return $result;
     }
-    function list_commandesvendeur()
+    function list_mescommandes()
     {
 
         $servername = "localhost";
