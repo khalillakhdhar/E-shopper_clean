@@ -43,7 +43,7 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
                                 <li><a href="panier.php"><i class="fa fa-shopping-cart"></i> panier</a></li>
-                                <li><a href="deco.php"><i class="fa fa-lock"></i> Déconnexion</a></li>
+                                <li><a href="login.php"><i class="fa fa-lock"></i> Déconnexion</a></li>
                             </ul>
                         </div>
                     </div>
